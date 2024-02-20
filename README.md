@@ -30,4 +30,4 @@ You can add it as submodule using `git submodule add https://github.com/mnjm/jop
 
 `python3 joplin2hugo.py ~/joplin-save-dir posts/ --hugo_base_dir ~/hugo_site`
 
-Assuming there is a Joplin markdown file named `An Another Blog.md` saved in `~/joplin-save-dir/Blog` and its associated images in `~/joplin-save-dir/_resources`. Upon executing the above command, the content will be saved in `~/hugo_site/content/posts/An-Another-Blog.md` with images in the same directory, and URLs adjusted.
+Assuming there is a Joplin markdown file named `An Another Blog.md` saved in `~/joplin-save-dir/Blog` and its associated images in `~/joplin-save-dir/_resources`. Upon executing the above command, the content will be saved in `~/hugo_site/content/posts/An-Another-Blog/index.md` with images in the same directory, and URLs adjusted.
