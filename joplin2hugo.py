@@ -81,8 +81,9 @@ def main():
     assert os.system(cmd) == 0, "Moving failed"
 
     # suggest removing the src dir
-    logging.info("Suggesting to remove 'Blog' and '_resources' dirs")
-    print(f"rm -r {path.dirname(src_md_file)} {resources_dir}")
+    logging.info("Recommending to remove 'Blog' and '_resources' dirs")
+    cmd = "rm -rIv {path.dirname(src_md_file)} {resources_dir}"
+    assert os.system(cmd) == 0, "Removal failed"
 
     return
 
