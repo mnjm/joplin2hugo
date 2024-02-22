@@ -82,8 +82,10 @@ def main():
 
     # suggest removing the src dir
     logging.info("Recommending to remove 'Blog' and '_resources' dirs")
-    cmd = "rm -rIv {path.dirname(src_md_file)} {resources_dir}"
-    print(cmd)
+    cmd = f"rm -rIv {path.dirname(src_md_file)} {resources_dir}"
+    assert os.system(cmd) == 0, "Removing failed"
+
+    logging.info("Injection successful")
 
     return
 
