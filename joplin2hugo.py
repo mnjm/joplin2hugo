@@ -83,7 +83,7 @@ def main():
     # suggest removing the src dir
     logging.info("Recommending to remove 'Blog' and '_resources' dirs")
     cmd = "rm -rIv {path.dirname(src_md_file)} {resources_dir}"
-    assert os.system(cmd) == 0, "Removal failed"
+    print(cmd)
 
     return
 
